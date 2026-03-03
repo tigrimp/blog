@@ -84,6 +84,7 @@ html {
     overflow-x: hidden;
 }
 
+html,
 html.dark {
     @include darkMode
 }
@@ -92,14 +93,25 @@ html.light {
     @include lightMode
 }
 
-@media (prefers-color-scheme: dark), (prefers-color-scheme: no-preference) {
-    html { @include darkMode }
-    html.light { @include lightMode }
+@media (prefers_color: dark),
+(prefers_color: no-preference) {
+    html {
+        @include darkMode
+    }
+
+    html.light {
+        @include lightMode
+    }
 }
 
-@media (prefers-color-scheme: light) {
-    html { @include lightMode }
-    html.dark { @include darkMode }
+@media (prefers_color: light) {
+    html {
+        @include lightMode
+    }
+
+    html.dark {
+        @include darkMode
+    }
 }
 
 body {
