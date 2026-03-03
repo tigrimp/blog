@@ -7,6 +7,7 @@
 @import 'flexible';
 
 
+
 /* 0. Variables
    ========================================================================== */
 
@@ -63,11 +64,11 @@
 
 /* 1. General
    ========================================================================== */
-
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    font-family: 'Monocraft', monospace;
 }
 @font-face {
     font-family: 'Monocraft';
@@ -84,22 +85,22 @@ html {
 }
 
 html,
-html.light {
-    @include lightMode
-}
-
 html.dark {
     @include darkMode
 }
 
-@media (prefers_color: light),
+html.light {
+    @include lightMode
+}
+
+@media (prefers_color: dark),
 (prefers_color: no-preference) {
     html {
-        @include lightMode
+        @include darkMode
     }
 
-    html.dark {
-        @include darkMode
+    html.light {
+        @include lightMode
     }
 }
 
@@ -117,7 +118,7 @@ body {
     height: 100%;
     font-weight: normal;
     font-style: normal;
-    font-family: -apple-system, BlinkMacSystemFont, 'Titillium Web', "Segoe UI", Roboto, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: 'Monocraft', monospace;
     margin: 0;
     padding: 0;
     background-color: var(--bg_color);
