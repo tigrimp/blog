@@ -69,6 +69,12 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+@font-face {
+    font-family: 'Monocraft';
+    src: url('https://cdn.jsdelivr.net/gh/IdreesInc/Monocraft@main/dist/Monocraft-ttf/Monocraft.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 html {
     margin: 0;
