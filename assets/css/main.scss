@@ -68,7 +68,7 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    font-family: 'Monocraft', monospace;
+    font-family: 'Monocraft', monospace !important;
 }
 @font-face {
     font-family: 'Monocraft';
@@ -84,7 +84,6 @@ html {
     overflow-x: hidden;
 }
 
-html,
 html.dark {
     @include darkMode
 }
@@ -93,25 +92,14 @@ html.light {
     @include lightMode
 }
 
-@media (prefers_color: dark),
-(prefers_color: no-preference) {
-    html {
-        @include darkMode
-    }
-
-    html.light {
-        @include lightMode
-    }
+@media (prefers-color-scheme: dark), (prefers-color-scheme: no-preference) {
+    html { @include darkMode }
+    html.light { @include lightMode }
 }
 
-@media (prefers_color: dark) {
-    html {
-        @include darkMode
-    }
-
-    html.light {
-        @include lightMode
-    }
+@media (prefers-color-scheme: light) {
+    html { @include lightMode }
+    html.dark { @include darkMode }
 }
 
 body {
@@ -125,8 +113,6 @@ body {
     transition: background-color 0.5s ease;
     background-size: 100%;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-text-size-adjust: 100%;
 
     @include breakpoint(medium) {
         zoom: 1;
@@ -611,11 +597,11 @@ img {
         white-space: pre;
     }
 
-    code {
+   code {
         color: var(--inlinecode_text);
         padding: .1em .4em;
         border-radius: 5px;
-        font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+        font-family: 'Monocraft', monospace; /* Updated this */
         font-size: .85rem;
     }
 
