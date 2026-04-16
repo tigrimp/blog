@@ -18,7 +18,7 @@ cusdis:
     app_id: #your cusdis app_id
 
 user:
-  name: tigrmip
+  name: tigrimp
   pic: /assets/img/cat.jpg
   picAlt: "frog"
   job: idiot
