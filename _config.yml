@@ -1,11 +1,11 @@
 
-title: Tigrimp #Your awesome title
+title: tigrimp
 email: tigrimpy@gmail.com
-description: > # this means to ignore newlines until "baseurl"
-  math.robotics.ee.red pandas
+description: > 
+
 
 baseurl: "/blog/"
-url: https://tigrimp.github.io/blog # the base hostname & protocol for your site
+url: https://tigrimp.github.io/blog 
 
 permalink: /:year-:month/:title
 timezone: 
